@@ -10,51 +10,54 @@
 <form>
 <div class="form-group row mb-4">
 
+    
     <div class="col-sm-4">
         @Html.Label("lblNombre", "Nombre de Usuario")
     </div>
-    <div class="col-sm-4">
+        <div class="col-sm-6">
         @Html.TextBox("txt_NombreDeUsuario", "", new{ @class="form-control"})
     </div>
 
-    <div class="">
+        <div class="col-sm-4">
         @Html.Label("lblContrasena", "Contraseña")
     </div>
-    <div class="">
+        <div class="col-sm-6">
         @Html.Password("Contrasena", "", new{@class = "form-control"})
     </div>
 
-    <div class="">
+        <div class="col-sm-4">
         @Html.Label("lblGenero", "Género")
     </div>
-    <div class="">
+    <div class="col-sm-4">
         @Html.RadioButton("Genero", "Masculino", true, new { id = "masculino" })
             Masculino
-        @Html.RadioButton("Genero", "Femenino", false, new { id = "femenino" })
+    </div>
+    <div class="col-sm-4>
+            @Html.RadioButton("Genero", "Femenino", false, new { id = "femenino" })
             Femenino
     </div>
 
-    <div class="">
+    <div class="col-sm-4">
         @Html.Label("lblDireccion", "Dirección")
     </div>
-    <div>
+    <div class="col-sm-6">
         @Html.TextArea("Direccion", "Ingrese su direccion", new{@class = "form-comtrol", id = "idDireccion"})
     </div>
 
-    <div class="">
+    <div class="col-sm-4">
         @Html.Label("lblPasatiempos", "Pasatiempos") 
     </div>
-    <div>
+    <div class="col-sm-4">
         @Html.CheckBox("Bailar")
         @Html.CheckBox("Correr") 
         @Html.CheckBox("Escalar")     
         @Html.CheckBox("Películas")
     </div>
 
-    <div class="">
+    <div class="col-sm-4">
         @Html.Label("lblCursos", "Cursos")
     </div>
-    <div>
+    <div class="col-sm-4">
         @{
              IEnumerable<string> strList = new List<string> { "POO", "TW", "MAT3", "FIS1" };
          }
@@ -62,10 +65,10 @@
     </div>
 
 
-    <div class="">
+    <div class="col-sm-4">
         @Html.Label("lblConocimientos", "Conocimientos")
     </div>
-    <div>
+    <div class="col-sm-4">
         @Html.ListBox("Seleccionar habilidades", new List<SelectListItem>
         {
             new SelectListItem {Text = "C #", Value = "1"},new SelectListItem {Text = "ASP.NET", Value = "2"},
